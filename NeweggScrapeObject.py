@@ -26,7 +26,7 @@ class NeweggStock:
         i = 0
         for item in self.soup.select(".item-info"):
             if 'OUT OF STOCK' not in item.text:
-                self.stock.append((self.soup.select(".item-title")[i].text,self.soup.select(".item-title")[i]['href'],self.soup.select(".item-promo")[i].text))
+                self.stock.append((self.soup.select(".item-title")[i].text,self.soup.select(".item-title")[i]['href']))
             i += 1
 
 

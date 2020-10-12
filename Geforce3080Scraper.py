@@ -19,8 +19,11 @@ neweggUrl = input('Paste the URL to the Filtered Newegg Site for 3080s:')
 # Scraping Logic
 while True:
 
-    #Creating a neweggStock Class to cause it to request from the website and to parse the data
+    #Creating a neweggStock Class
     neweggStockList = NeweggStock(neweggUrl)
+
+    #Running the checkStock method to request the site and fill in the stock list
+    neweggStockList.checkStock()
 
     #checks if the stocklist is empty or not and sends an alert if it is not empty
     if neweggStockList.stock != []:
