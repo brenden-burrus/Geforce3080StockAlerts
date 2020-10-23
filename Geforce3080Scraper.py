@@ -11,8 +11,8 @@ import getpass
 # Importing time to cause a delay
 import time
 
-fromAddress = input("Please input the yahoo email address you would like to use: ")
-fromPassword = getpass.getpass("Please enter your password: ")
+fromAddress = input("Please input the gmail email address you would like to use: ")
+fromPassword = getpass.getpass("Please enter your app password: ")
 toAddress = input("Please input the email address you would like to send to: ")
 neweggUrl = input('Paste the URL to the Filtered Newegg Site for 3080s:')
 
