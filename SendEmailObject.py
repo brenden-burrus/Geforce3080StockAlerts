@@ -22,9 +22,10 @@ class EmailAlert:
     def sendemail(self):
 
         #Connecting to email address
-        smtpObject = smtplib.SMTP('smtp.mail.yahoo.com',587)
+        smtpObject = smtplib.SMTP('smtp.gmail.com',587)
         smtpObject.ehlo()
         smtpObject.starttls()
+        smtpObject.ehlo()
         smtpObject.login(self.fromAddress,self.fromPassword)
         
         #Creating the Message
