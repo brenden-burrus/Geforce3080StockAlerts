@@ -29,10 +29,10 @@ class EmailAlert:
         smtpObject.login(self.fromAddress,self.fromPassword)
         
         #Creating the Message
-        subject = "Hello," + '\n' + "At the time of sending this email, here are the items in stock: "
+        subject = "Hello," + '\n' + "At the time of sending this email, here are the items in stock: " + '\n'
         stockMsg = ''
-        for item,url,promo in self.stocklist:
-            stockMsg = stockMsg + (f'{item} is in stock. The website is: {url}  and the promos available are: {promo}.') + '\n'
+        for item,url in self.stocklist:
+            stockMsg = stockMsg + (f'{item} is in stock. The website is: {url}.') + '\n'
         fullMsg = subject + stockMsg
 
         #sending email
